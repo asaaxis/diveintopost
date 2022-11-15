@@ -49,6 +49,7 @@
                 <%= link_to new_agenda_article_path(agenda), class: 'nav-link' do %>
                   <p>+ <%= I18n.t('views.messages.create_article') %></p>
                 <% end %>
+                <%= link_to I18n.t('views.button.delete'), agenda_path(agenda.id), method: :delete, data: { confirm: '削除しますか？' }, class: 'btn btn-sm btn-danger' %>
               </li>
             </ul>
           </li>
